@@ -243,7 +243,8 @@ console.log( sucursalDelMes(1, 2019) ); // "Centro"
 //renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
 
 function renderPorMes() {
-
+   
+}
 console.log( renderPorMes() );
 
 // Ventas por mes:
@@ -251,20 +252,26 @@ console.log( renderPorMes() );
 //   Total de febrero 2019: 4210
 //-----------------------------------------------------------EJERCICIO N°2--------------------------------------------------------------------------
 //renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
-//function renderPorSucursal() {
-    
-//}
 
-//console.log( renderPorSucursal() );
+function renderPorSucursal() {
+    var sucu = ' ';
+    for (let i = 0; i < local.sucursal.length; i++) {
+        sucu = console.log('Total de ' + local.sucursal[i] + ': ' + ventasSucursal(local.sucursal[i]))
+        
+    }
+    return sucu;
+}
+
+console.log( renderPorSucursal() );
 // Ventas por sucursal:
 //   Total de Centro: 4195
 //   Total de Caballito: 1265
 //-----------------------------------------------------------EJERCICIO N°3--------------------------------------------------------------------------
 //render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido y la vendedora que más ingresos generó
-//function render() {
+function render() {
     
-//}
-//console.log( render() );
+}
+console.log( render() );
 // Reporte
 // Ventas por mes:
 //   Total de enero 2019: 1250
