@@ -243,21 +243,13 @@ console.log( sucursalDelMes(1, 2019) ); // "Centro"
 //renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
 
 function renderPorMes() {
-    var mesesNumero = [0,1,2,3,4,5,6,7,8,9,10,11];
     var mesesLetras = ['Enero', 'Febrero','Marzo', 'Abril', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-    var elMes = [];
-    var lista
-
-    for (let i = 0; i < mesesNumero.length; i++) {
-        elMes.push(ventasMes(mesesNumero[i], 2019));      
-        //me da mal :(
-        
-    }
     for (let i = 0; i < mesesLetras.length; i++) {
-        lista = console.log("Total de " + mesesLetras[i] + " 2019: " + elMes[i]);
-        
+        var vM = ventasMes(i, 2019);
+        if (vM) {
+            console.log("Total de " + mesesLetras[i] + " 2019: " + vM);
+        }
     }
-   return lista
 }
 console.log( renderPorMes() );
 
