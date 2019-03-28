@@ -279,9 +279,9 @@ console.log( renderPorSucursal() );
 //render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido y la vendedora que más ingresos generó
 
 function render() {
-    console.log('ventas por mes' + renderPorMes());
-    console.log('ventas por sucursal' + renderPorSucursal());
-    console.log('producto estrella' + componenteMasVendido());
+    renderPorMes();
+    renderPorSucursal();
+    console.log('producto estrella: ' + componenteMasVendido());
 
     function mejorVendedora() {
         var masVendedora = 0;
