@@ -162,22 +162,21 @@ console.log(local);
 
 
 var nuevaData = [
-{ fecha: new Date(2019, 2, 12), nombreVendedora: 'Hedy', componentes: ['Monitor GPRS 3000', 'HDD Toyiva'], sucursal: 'Centro' },
-{ fecha: new Date(2019, 2, 24), nombreVendedora: 'Shreyl', componentes: ['Motherboard ASUS 1500', 'HDD Wezter Dishital'], sucursal: 'Caballito'},
-{ fecha: new Date(2019, 2, 1), nombreVendedora: 'Ada', componentes: ['Motherboard MZI', 'RAM Quinston Fury'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 11), nombreVendedora: 'Grace', componentes: ['Monitor ASC 543', 'RAM Quinston'], sucursal: 'Caballito'},
-{ fecha: new Date(2019, 2, 11), nombreVendedora: 'Grace', componentes: ['Monitor ASC 543', 'RAM Quinston'], sucursal: 'Caballito'},
-{ fecha: new Date(2019, 2, 15), nombreVendedora: 'Ada', componentes: ['Motherboard ASUS 1200', 'RAM Quinston Fury'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 12), nombreVendedora: 'Hedy', componentes: ['Motherboard ASUS 1500', 'HDD Toyiva'], sucursal: 'Caballito'},
-{ fecha: new Date(2019, 2, 21), nombreVendedora: 'Grace', componentes: ['Motherboard MZI', 'RAM Quinston'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 8), nombreVendedora: 'Sheryl', componentes: ['Monitor ASC 543', 'HDD Wezter Dishital'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 16), nombreVendedora: 'Sheryl', componentes: ['Monitor GPRS 3000', 'RAM Quinston Fury'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 27), nombreVendedora: 'Hedy', componentes: ['Motherboard ASUS 1200', 'HDD Toyiva'], sucursal: 'Caballito'},
-{ fecha: new Date(2019, 2, 22), nombreVendedora: 'Grace', componentes: ['Monitor ASC 543', 'HDD Wezter Dishital'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 5), nombreVendedora: 'Ada', componentes: ['Motherboard ASUS 1500', 'RAM Quinston'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 1), nombreVendedora: 'Grace', componentes: ['Motherboard MZI', 'HDD Wezter Dishital'], sucursal: 'Centro'},
-{ fecha: new Date(2019, 2, 7), nombreVendedora: 'Sheryl', componentes: ['Monitor GPRS 3000', 'RAM Quinston'], sucursal: 'Caballito'},
-{ fecha: new Date(2019, 2, 14), nombreVendedora: 'Ada', componentes: ['Motherboard ASUS 1200', 'HDD Toyiva'], sucursal: 'Centro'}
+{ fecha: new Date(2019, 1, 12), nombreVendedora: 'Hedy', componentes: ['Monitor GPRS 3000', 'HDD Toyiva'], sucursal: 'Centro' },
+{ fecha: new Date(2019, 1, 24), nombreVendedora: 'Shreyl', componentes: ['Motherboard ASUS 1500', 'HDD Wezter Dishital'], sucursal: 'Caballito'},
+{ fecha: new Date(2019, 1, 1), nombreVendedora: 'Ada', componentes: ['Motherboard MZI', 'RAM Quinston Fury'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 11), nombreVendedora: 'Grace', componentes: ['Monitor ASC 543', 'RAM Quinston'], sucursal: 'Caballito'},
+{ fecha: new Date(2019, 1, 15), nombreVendedora: 'Ada', componentes: ['Motherboard ASUS 1200', 'RAM Quinston Fury'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 12), nombreVendedora: 'Hedy', componentes: ['Motherboard ASUS 1500', 'HDD Toyiva'], sucursal: 'Caballito'},
+{ fecha: new Date(2019, 1, 21), nombreVendedora: 'Grace', componentes: ['Motherboard MZI', 'RAM Quinston'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 8), nombreVendedora: 'Sheryl', componentes: ['Monitor ASC 543', 'HDD Wezter Dishital'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 16), nombreVendedora: 'Sheryl', componentes: ['Monitor GPRS 3000', 'RAM Quinston Fury'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 27), nombreVendedora: 'Hedy', componentes: ['Motherboard ASUS 1200', 'HDD Toyiva'], sucursal: 'Caballito'},
+{ fecha: new Date(2019, 1, 22), nombreVendedora: 'Grace', componentes: ['Monitor ASC 543', 'HDD Wezter Dishital'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 5), nombreVendedora: 'Ada', componentes: ['Motherboard ASUS 1500', 'RAM Quinston'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 1), nombreVendedora: 'Grace', componentes: ['Motherboard MZI', 'HDD Wezter Dishital'], sucursal: 'Centro'},
+{ fecha: new Date(2019, 1, 7), nombreVendedora: 'Sheryl', componentes: ['Monitor GPRS 3000', 'RAM Quinston'], sucursal: 'Caballito'},
+{ fecha: new Date(2019, 1, 14), nombreVendedora: 'Ada', componentes: ['Motherboard ASUS 1200', 'HDD Toyiva'], sucursal: 'Centro'}
 ]
 
 for (let i = 0; i < nuevaData.length; i++) {
@@ -241,7 +240,7 @@ console.log( sucursalDelMes(1, 2019) ); // "Centro"
 //Para tener una mejor muestra de como está resultando el local, queremos desarrollar un reporte que nos muestre las ventas por sucursal y por mes. Para esto, necesitamos crear las siguientes funciones:
 //-------------------------------------------------------------EJERCICIO N°1------------------------------------------------------------------------
 //renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
-
+console.log('Ventas por mes: ');
 function renderPorMes() {
     var mesesLetras = ['Enero', 'Febrero','Marzo', 'Abril', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     for (let i = 0; i < mesesLetras.length; i++) {
@@ -258,7 +257,7 @@ renderPorMes();
 //   Total de febrero 2019: 4210
 //-----------------------------------------------------------EJERCICIO N°2--------------------------------------------------------------------------
 //renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
-
+console.log('Ventas por sucursal: ');
 function renderPorSucursal() {
     var sucu = ' ';
     for (let i = 0; i < local.sucursal.length; i++) {
@@ -278,28 +277,30 @@ renderPorSucursal();
 //render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido y la vendedora que más ingresos generó
 
 function render() {
+    console.log('Ventas por mes: ');
     renderPorMes();
+    console.log('Ventas por sucursal: ');
     renderPorSucursal();
-    console.log('producto estrella: ' + componenteMasVendido());
+    console.log('Producto estrella: ' + componenteMasVendido());
 
     function mejorVendedora() {
-        var masVendedora = 0;
-        var actual = 0;
-        var nombre;
-        for (let i = 0; i< local.ventas.length; i++){
-                actual = vendedoraDelMes(local.ventas[i].nombreVendedora);
-                if (actual> masVendedora){
-                    masVendedora=actual;
-                    nombre=local.ventas[i].nombreVendedora;
-                }
-            actual=0;    
-            }
-            return nombre
+        var totalesPorVendedora = []
+        for (let i = 0; i< vendedoras.length; i++){
+            totalesPorVendedora.push({vendedora: vendedoras[i], ventas:ventasVendedora(vendedoras[i])})
         }
-        mejorVendedora();
-        console.log("Vendedora que más ingresos generó: " + mejorVendedora())
-
+        var nombre;
+        var masVendedora=0;
+        var actual = 0;
+        for (let i = 0; i< totalesPorVendedora.length; i++){
+            actual = totalesPorVendedora[i].ventas;
+            if (actual> masVendedora){
+                masVendedora=actual;
+                nombre=totalesPorVendedora[i].vendedora;
+            }
+        }
+        return nombre
     }
+}        
 render();
 
 // Reporte
