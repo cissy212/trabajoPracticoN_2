@@ -269,6 +269,7 @@ function renderPorSucursal() {
 renderPorSucursal();
 
 //no me da la sucursal caballito :(
+    //habia copiado mal los datos yo
 
 // Ventas por sucursal:
 //   Total de Centro: 4195
