@@ -245,13 +245,13 @@ console.log( sucursalDelMes(1, 2019) ); // "Centro"
 function renderPorMes() {
     var mesesLetras = ['Enero', 'Febrero','Marzo', 'Abril', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     for (let i = 0; i < mesesLetras.length; i++) {
-        var vM = ventasMes(i, 2019);
+        var vM = ventasMes(i+1, 2019);
         if (vM) {
             console.log("Total de " + mesesLetras[i] + " 2019: " + vM);
         }
     }
 }
-console.log( renderPorMes() );
+renderPorMes();
 
 // Ventas por mes:
 //   Total de enero 2019: 1250
@@ -267,8 +267,7 @@ function renderPorSucursal() {
     }
     return sucu;
 }
-
-console.log( renderPorSucursal() );
+renderPorSucursal();
 
 //no me da la sucursal caballito :(
 
@@ -301,9 +300,7 @@ function render() {
         console.log("Vendedora que más ingresos generó: " + mejorVendedora())
 
     }
-    
-
-console.log( render() );
+render();
 
 // Reporte
 // Ventas por mes:
