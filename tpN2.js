@@ -85,7 +85,7 @@ console.log( vendedoraDelMes(1, 2019) ); // "Ada" (vendio por $670, una máquina
 //ventasMes(mes, anio): Obtener las ventas de un mes.
 
 function ventasMes(mes,anio) {
-    ventasDelMes = 0;
+    var ventasDelMes = 0;
     for (let i = 0; i < local.ventas.length; i++) {
         if (local.ventas[i].fecha.getMonth()+1 === mes && local.ventas[i].fecha.getFullYear() === anio){
             ventasDelMes += precioMaquina(local.ventas[i].componentes);
@@ -99,7 +99,7 @@ console.log( ventasMes(1, 2019) ); // 1250
 //ventasVendedora(nombre): Obtener las ventas totales realizadas por una vendedora sin límite de fecha.
 
 function ventasVendedora(nombre) {
-    ventasPorVendedora = 0;
+    var ventasPorVendedora = 0;
     for (let i = 0; i < local.ventas.length; i++) {
             if (local.ventas[i].nombreVendedora === nombre){
                 ventasPorVendedora += precioMaquina(local.ventas[i].componentes);
@@ -187,7 +187,7 @@ for (let i = 0; i < nuevaData.length; i++) {
 //-------------------------------------------------------------EJERCICIO N°4------------------------------------------------------------------------
 //Crear la función ventasSucursal(sucursal), que obtiene las ventas totales realizadas por una sucursal sin límite de fecha.
 function ventasSucursal(sucursal) {
-    ventasPorSucursal = 0;
+    var ventasPorSucursal = 0;
     for (let i = 0; i < local.ventas.length; i++) {
             if (local.ventas[i].sucursal === sucursal){
                 ventasPorSucursal += precioMaquina(local.ventas[i].componentes);
@@ -201,7 +201,7 @@ console.log( ventasSucursal("Centro") ); // 4195
 //Las funciones ventasSucursal y ventasVendedora tienen mucho código en común, ya que es la misma funcionalidad pero trabajando con una propiedad distinta. Entonces, ¿cómo harías para que ambas funciones reutilicen código y evitemos repetir?
 
 function ventasPor(nombreProp, valorProp) {
-	acumVentas = 0;
+	var acumVentas = 0;
 	for (let i = 0; i < local.ventas.length; i++) {
 		if (local.ventas[i][nombreProp] === valorProp){
 			acumVentas += precioMaquina(local.ventas[i].componentes);
@@ -243,7 +243,7 @@ console.log( sucursalDelMes(1, 2019) ); // "Centro"
 //renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
 
 function renderPorMes() {
-    var mesesNumero = [1,2,3,4,5,6,7,8,9,10,11,12];
+    var mesesNumero = [0,1,2,3,4,5,6,7,8,9,10,11];
     var mesesLetras = ['Enero', 'Febrero','Marzo', 'Abril', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     var elMes = [];
     var lista
