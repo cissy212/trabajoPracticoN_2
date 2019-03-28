@@ -275,7 +275,7 @@ renderPorSucursal();
 //   Total de Caballito: 1265
 //-----------------------------------------------------------EJERCICIO N°3--------------------------------------------------------------------------
 //render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido y la vendedora que más ingresos generó
-
+console.log('Reporte General: ');
 function render() {
     console.log('Ventas por mes: ');
     renderPorMes();
@@ -285,12 +285,12 @@ function render() {
 
     function mejorVendedora() {
         var totalesPorVendedora = []
-        for (let i = 0; i< vendedoras.length; i++){
-            totalesPorVendedora.push({vendedora: vendedoras[i], ventas:ventasVendedora(vendedoras[i])})
+        for (let i = 0; i< local.vendedoras.length; i++){
+            totalesPorVendedora.push({vendedora: local.vendedoras[i], ventas: ventasVendedora(local.vendedoras[i])})
         }
         var nombre;
-        var masVendedora=0;
         var actual = 0;
+        var masVendedora = 0;
         for (let i = 0; i< totalesPorVendedora.length; i++){
             actual = totalesPorVendedora[i].ventas;
             if (actual> masVendedora){
@@ -300,8 +300,10 @@ function render() {
         }
         return nombre
     }
-}        
+    console.log("Vendedora que más ingresos generó: " + mejorVendedora());
+}
 render();
+
 
 // Reporte
 // Ventas por mes:
