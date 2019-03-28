@@ -243,7 +243,21 @@ console.log( sucursalDelMes(1, 2019) ); // "Centro"
 //renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
 
 function renderPorMes() {
-   
+    var mesesNumero = [1,2,3,4,5,6,7,8,9,10,11,12];
+    var mesesLetras = ['Enero', 'Febrero','Marzo', 'Abril', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    var elMes = [];
+    var lista
+
+    for (let i = 0; i < mesesNumero.length; i++) {
+        elMes.push(ventasMes(mesesNumero[i], 2019));      
+        //me da mal :(
+        
+    }
+    for (let i = 0; i < mesesLetras.length; i++) {
+        lista = console.log("Total de " + mesesLetras[i] + " 2019: " + elMes[i]);
+        
+    }
+   return lista
 }
 console.log( renderPorMes() );
 
@@ -263,15 +277,42 @@ function renderPorSucursal() {
 }
 
 console.log( renderPorSucursal() );
+
+//no me da la sucursal caballito :(
+
 // Ventas por sucursal:
 //   Total de Centro: 4195
 //   Total de Caballito: 1265
 //-----------------------------------------------------------EJERCICIO N°3--------------------------------------------------------------------------
 //render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido y la vendedora que más ingresos generó
+
 function render() {
+    console.log('ventas por mes' + renderPorMes());
+    console.log('ventas por sucursal' + renderPorSucursal());
+    console.log('producto estrella' + componenteMasVendido());
+
+    function mejorVendedora() {
+        var masVendedora = 0;
+        var actual = 0;
+        var nombre;
+        for (let i = 0; i< local.ventas.length; i++){
+                actual = vendedoraDelMes(local.ventas[i].nombreVendedora);
+                if (actual> masVendedora){
+                    masVendedora=actual;
+                    nombre=local.ventas[i].nombreVendedora;
+                }
+            actual=0;    
+            }
+            return nombre
+        }
+        mejorVendedora();
+        console.log("Vendedora que más ingresos generó: " + mejorVendedora())
+
+    }
     
-}
+
 console.log( render() );
+
 // Reporte
 // Ventas por mes:
 //   Total de enero 2019: 1250
