@@ -1,3 +1,10 @@
+// Querida Ce, ahi van las observaciones. 
+// Lamento no tener mucho para agregar mas que alguna manera alternativa de encarar algunas funciones
+// Pero lo cierto es que tu trabajo esta excelente y hay muy poco para agregar
+// Mucho mas teniendo en cuenta el escaso tiempo en que lo hiciste. 
+// Tu codigo esta muy bien, es muy claro y legible, y encaraste muy bien las soluciones
+// Solo puedo felicitarte y esperar que sigas asi
+
 
 var local = {
   vendedoras: ["Ada", "Grace", "Hedy", "Sheryl"],
@@ -38,6 +45,8 @@ function precioMaquina(componentes) {
         }
     }  
     return valorAcumulado 
+	
+	// bien!
 }
 console.log( precioMaquina(["Monitor GPRS 3000", "Motherboard ASUS 1500"]) ); // 320 ($200 del monitor + $120 del motherboard)
 
@@ -55,6 +64,8 @@ function cantidadVentasComponente(componente) {
     }
     return componentesVendidos
 }
+
+// excelente 
 console.log( cantidadVentasComponente("Monitor ASC 543") ); // 2
 
 //--------------------------------------------------------EJERCICIO N°3---------------------------------------------------------------------------
@@ -80,6 +91,8 @@ function vendedoraDelMes(mes, anio) {
     return ganadora;
 }
 console.log( vendedoraDelMes(1, 2019) ); // "Ada" (vendio por $670, una máquina de $320 y otra de $350)
+
+// muy bien!
 
 //-------------------------------------------------------------EJERCICIO N°4-----------------------------------------------------------------------
 //ventasMes(mes, anio): Obtener las ventas de un mes.
@@ -140,6 +153,13 @@ function huboVentas(mes,anio){
     }
     return ventas;
 }
+
+// Una manera super breve de hacer esta funcion:
+// function huboVentas (mes, anio) {
+//   return ventasMes(mes, anio) > 0;
+// }
+
+
 console.log( huboVentas(3, 2019) ); // false
 //----------------------------------------------------------- SEGUNDA PARTE ------------------------------------------------------------------------
 //Como se abrió una nueva sucursal en Caballito, ahora los datos de las ventas también tienen el nombre de la sucursal en la cual se realizó. Por ejemplo: { fecha: new Date(2019, 1, 1), nombreVendedora: "Ada", componentes: ["Monitor GPRS 3000", "Motherboard ASUS 1500"], sucursal: 'Centro' }. Por este cambio, se pide:
@@ -210,7 +230,7 @@ function ventasPor(nombreProp, valorProp) {
 }
 console.log( ventasPor('nombreVendedora','Hedy') );
 console.log( ventasPor('sucursal', 'Caballito') );
-
+//Excelente
 
 //-------------------------------------------------------------EJERCICIO N°6------------------------------------------------------------------------
 //Crear la función sucursalDelMes(mes, anio), que se le pasa dos parámetros numéricos, (mes, anio) y devuelve el nombre de la sucursal que más vendió en plata en el mes. No cantidad de ventas, sino importe total de las ventas. El importe de una venta es el que indica la función precioMaquina.
@@ -301,6 +321,20 @@ function render() {
         }
         return nombre
     }
+	
+	// Una manera mas breve (aunque mas abstracta)
+	// seria usando la misma logica (ir reemplazando valores por otros
+	// a medida que encontramos uno mas grande)
+	
+// function mejorVendedora () {
+// 	  var max = local.vendedoras[0];
+//   	  for (var i = 0; i < local.vendedoras.length; i++) {
+//          if (ventasVendedora(local.vendedoras[i]) > ventasVendedora(max)) {
+//            max = local.vendedoras[i];
+//          }
+//        }
+//   return max;
+// }
     console.log("Vendedora que más ingresos generó: " + mejorVendedora());
 }
 render();
